@@ -1,0 +1,68 @@
+<app-header-main></app-header-main>
+<div class="row historico-titulo">
+    <div class="col-lg-12">
+        <h2>Histórico de compras </h2>
+    </div>
+</div>
+
+<div class="hist"> 
+    <div *ngFor="let pedido of responsePedidos" class="row historico-tabela" >
+        <div  class="historico-fundo col-lg-9">
+            <div class="row historico">
+                <div class="col-lg-12">
+                    <ul>
+                        <div class="col-3 item">
+                            <p> Número do Pedido: {{pedido.idPedido}} </p>
+                        </div>
+                        <div class="col-3 item">
+                            <p> Produto </p>
+                        </div>
+                        <div class="col-3 item">
+                            <p> Quantidade </p>
+                        </div>
+                        <div class="col-3 item">
+                            <p> Valor Unitário </p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div *ngFor="let items of pedido.items" class="row">
+                <div class="col-3 item">
+                    <p>{{ items.nrItemPedido}}</p>
+                </div>
+                <div class="col-3 item">
+                    <p>{{ items.dsProduto }}</p>
+                </div>
+                <div class="col-3 item">
+                    <p>{{ items.qtProduto }}</p>
+                </div>
+                <div class="col-3 item">
+                    <p>{{ items.vlPedidoItem | currency: "BRL" }}</p>
+                </div>
+            </div>
+
+            <div class="row historico">
+                <div class="col-lg-12">
+                    <ul>
+                        <div class="col-4"><p>{{pedido.tipoVenda}}</p></div>
+                        <div class="col-4"><p>Status do Pedido: {{pedido.dsStatusPedido}}</p></div>
+                        <div class="col-4"><p>Número do Pedido: {{pedido.idPedido}}</p></div>
+                    </ul>
+                </div>
+            </div>
+            <div class="row historico">
+                <div class="col-lg-12">
+                    <ul>
+                        <div class="col-4"><p>Data da compra: {{ pedido.dtCompra | date: 'dd/MM/yyyy'  }}</p></div>
+                        <div class="col-4"><p>Valor Total do Pedido: {{pedido.vlTotalPedido | currency: "BRL"}}</p></div>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div  class="col-3 botao">
+            <button type="button" class="btn btn-success" (click)="addCestaCompras(pedido.idPedido); calculaCesta(); contaCesta();">Comprar novamente</button>
+        </div>   
+    </div>
+</div>
+<app-footer-main></app-footer-main>

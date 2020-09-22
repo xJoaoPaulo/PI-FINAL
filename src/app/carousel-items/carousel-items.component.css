@@ -1,0 +1,101 @@
+/*PRODUTOS*/
+.container-produtos {
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .box-produtos {
+    width: 280px;
+    height: 480px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 20px 10px;
+}
+
+.card-imagem-produto {
+    margin-top: 20px;
+    max-height: 70%;
+    max-width: 80%;
+    border-radius: 10px;
+    border-style: double;
+}
+
+.detalhe-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+} */
+
+.box-produtos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 380px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.card-imagem-produto {
+    margin-top: 20px;
+    max-height: 70%;
+    max-width: 60%;
+    border-radius: 10px;
+    border-style: double;
+}
+
+.detalhe-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detalhe-produto p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* .detalhe-produto p {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.6em;
+} */
+
+.titulos-produtos {
+    margin: 40px 10px;
+    color: #016f33;
+    display: flex;
+    justify-content: start;
+    font-style: italic;
+}
+
+.card-imagem-produto {
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+}
+
+.carrossel-produtos .carrossel-mais-vendidos .carrossel-ofertas-especiais{
+    margin: 0 0 50px 0;
+}
+
+.lslide {
+    display: flex;
+    justify-content: center;
+}
